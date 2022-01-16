@@ -1,0 +1,19 @@
+HELP.md
+target/
+!**/src/main/**
+!**/src/test/**
+.DS_Store
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### JS ###
+**/node_modules
+**/dist
+**/node
+*.log
+*.lockfile
+
