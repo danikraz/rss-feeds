@@ -1,6 +1,9 @@
 import express from 'express'
 import {getItems} from "./rss/rss-service";
 
+/**
+ * change port if already in use
+ */
 const app = express()
 const port = 5000
 
