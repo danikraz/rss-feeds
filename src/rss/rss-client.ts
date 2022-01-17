@@ -19,7 +19,10 @@ const rssFeeds =
         'http://expressen.se/rss/dokument'
     ]
 
-
+/**
+ * test should be added for this, didn't prioritize
+ * for this iteration
+ */
 export const getAllNewsItems = async (): Promise<Item[]> => {
     const parser: Parser<Feed> = new Parser({
         customFields: {
@@ -28,6 +31,10 @@ export const getAllNewsItems = async (): Promise<Item[]> => {
         }
     });
 
+    /**
+    * only logging errors here, a future improvement
+    * could be to present errors to the client
+    */
     const rssResults = rssFeeds.map(async feed => {
         try {
             const result = await parser.parseURL(feed)

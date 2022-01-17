@@ -4,6 +4,11 @@ import {getItems} from "./rss/rss-service";
 const app = express()
 const port = 5000
 
+/**
+ * chose to return news items in JSON with title, link and date
+ * this can be easily changed depending on requirements from client,
+ * any errors from feeds are only logged and not returned
+ */
 app.get('/latest', async (_, res) => {
     const items = await getItems()
     res.status(200).send(items)
